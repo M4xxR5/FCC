@@ -110,26 +110,38 @@ John Doe
 </p>
             </article>
         </section>
-        <section class="main-section">
-            <header id="Git_Basics">Git Basics</header>
+        <section class="main-section" id="Git_Basics">
+            <header>Git Basics</header>
+            <article>
+            <p>If you can read only one chapter to get going with Git, this is it. This chapter covers every basic command you need to do the vast majority of the things you’ll eventually spend your time doing with Git.</p>
+            <p>You can obtain a Git Repository in one of two ways:</p>
+            <ol>
+                <li>You can take a local directory that is currently not under version control, and turn it into a Git repository,</li> or
+                <li>You can <code>clone</code> an existing Git repository from elsewhere.</li>
+            </ol>
+            <p>In either case, you end up with a Git repository on your local machine, ready for work.</p>
+            <h3>Initializing a Repository in an Existing Directory</h3>
+            <p>If you have a project directory that is currently not under version control and you want to start controlling it with Git, you first need to go to that project’s directory. If you’ve never done this, it looks a little different depending on which system you’re running:<br>For Linux: <code class="codeblock">$ cd /home/user/my_project</code><br>For macOS: <code class="codeblock">$ cd /Users/user/my_project</code><br>For Windows: <code class="codeblock">$ cd /c/user/my_project</code><br>and then type: <code class="codeblock">$ git init</code><br>This creates a new subdirectory named <code>.git</code> that contains all of your necessary repository files — a Git repository skeleton.<br> If you want to start version-controlling existing files (as opposed to an empty directory), you should probably begin tracking those files and do an initial commit. You can accomplish that with a few <code>git add</code> commands that specify the files you want to track, followed by a <code>git commit</code>: <code class="codeblock">$ git add *.py
+            $ git add LICENSE
+            $ git commit -m 'initial project version'</code>We’ll go over what these commands do in just a minute. At this point, you have a Git repository with tracked files and an initial commit.</p>
+            <h3>Cloning an Existing Repository</h3>
+            <p>If you want to get a copy of an existing Git repository — for example, a project you’d like to contribute to — the command you need is <code class="codeblock">$ git clone &lt;url&gt;</code></p>. You can use <code>https://</code> protocol, <code>git://</code>, <code>user@server:path/to/repo.git</code>, as well as ssh://
+            </article>
+        </section>
+        <section class="main-section" id="Git_Branching">
+            <header>Git Branching</header>
             <p></p>
             <p></p>
             <code></code>
         </section>
-        <section class="main-section">
-            <header id="Git_Branching">Git Branching</header>
+        <section class="main-section" id="GitHub">
+            <header>GitHub</header>
             <p></p>
             <p></p>
             <code></code>
         </section>
-        <section class="main-section">
-            <header id="GitHub">GitHub</header>
-            <p></p>
-            <p></p>
-            <code></code>
-        </section>
-        <section class="main-section">
-            <header id="References_and_Further_Reading">References and Further Reading</header>
+        <section class="main-section" id="References_and_Further_Reading">
+            <header>References and Further Reading</header>
             <p><a href="">visual git guide</a></p>
             <p>orginal git doc</p>
             <code></code>
