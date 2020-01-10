@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mr. Pizza Survey</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Boogaloo|Roboto&display=swap');
+        body{
+            background: #f00 url(https://p0.piqsels.com/preview/869/323/810/food-meal-pizza-slice.jpg) no-repeat fixed center;
+            -webkit-background-size: cover;
+            background-size: cover;
+            color: #FFF;
+            font-family: sans-serif;
+            line-height: 1.5;
+        }
+        #frame {
+            background-color: #4c4c4c55;
+            margin: 0 20%;
+            border-radius: 12px;
+            padding: 1% 3%;
+        }
+        @media (max-width: 700px) {
+            #frame {
+                margin: 0 1%;
+            }
+        }
+		h1 {
+		    font-family: Boogaloo, sans-serif;
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+        }
+        #name, #email, #number, #dropdown {
+            width: 95%;
+            background-color: #0c0c0c55;
+            color: #FFF;
+            border-style: none none solid none;
+            border-width: 1px;
+            border-bottom-color: #F00;
+            padding: 5px;
+        }
+        ::placeholder {
+            color: #FFF;
+        }
+        :-ms-input-placeholder{
+            color: #FFF;
+        }
+        ::-ms-input-placeholder{
+            color: #FFF;
+        }
+        textarea {
+            width: 98.5%;
+            display: block;
+            margin: auto;
+            outline-color: #F00;
+            resize: none;
+            background-color: #4c4c4c55;
+            font-family: sans-serif;
+        }
+        button {
+            height: 50px;
+            width: 100%;
+            background-color: #F00;
+            color: #FFF;
+            border: none;
+            border-radius: 12px;
+            font-size: 26px;
+        }
+    </style>
+</head>
+<body>
+    <div id="frame">
+        <h1 id="title">&#127829; Mr. Pizza &#127829;</h1>
+        <p id="description">You choose Mr. Pizza and we appreciate it. We want to improve our services in order to give you ou best. If you complete this survey and you have chances to win a free pizza!</p>
+        <form action="#" id="survey-form">
+            <h2>Contact info</h2>
+            <label for="name" id="name-label">Name: </label>
+            <input type="text" id="name" placeholder="Enter your name" required><br>
+            <label for="" id="email-label">Email:</label>
+            <input type="email" id="email" placeholder="Enter a valid email" required><br>
+            <label for="" id="number-label">Age: </label>
+            <input type="number" id="number" min="0" max="150" placeholder="Type or select your age" required><br>
+            <label for="sex">Sex: </label>
+            <select name="sex" id="dropdown">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <h2>Customer Satisfaction</h2>
+            <p>Did you enjoy your dinning experience?</p>
+            <div>
+                <input type="radio" name="satisfaction" value="Satisfied"><label for="option1">Totally worth it!</label><br>
+                <input type="radio" name="satisfaction" value="Midly satisfied"><label for="option2">It was OK</label><br>
+                <input type="radio" name="satisfaction" value="Not Safisfied"><label for="option3">No.</label><br>
+            </div><br>
+            <p>Which of the following sentences describe your last experience? (You can select multiple options)</p>
+            <div>
+                <label for="ontime"><input type="checkbox" name="sentences" value="ontime">The delivery arrived on time.</label><br>
+                <label for="crispydough"><input type="checkbox" name="sentences" value="crispydough">The dough was crispy</label><br>
+                <label for="temperature"><input type="checkbox" name="sentences" value="temperature">The pizza was on the right temperature</label><br>
+            </div>
+            <p>Do you have any other comments?</p>
+            <textarea name="comment" id="" cols="30" rows="10" placeholder="You can suggest new ingredients or any better idea"></textarea><br>
+            <button id="submit">Submit Form</button>
+        </form>
+    </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
