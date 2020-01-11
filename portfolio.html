@@ -4,12 +4,48 @@
     <meta charset="UTF-8">
     <title>maxirios Portfolio</title>
     <style>
+        body {
+            margin: 0;
+        }
         #welcome-section {
             height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         #navbar {
-            position: sticky;
+            display: flex;
+            justify-content: space-around;
+            position: fixed;
             top: 0;
+            width: 100%;
+            padding: 2%;
+            z-index: 4;
+            background-color: saddlebrown;
+            text-align: center;
+        }
+        .nav-link {
+            text-decoration: none;
+            transition: 0.5s;
+        }
+        #card {
+            text-align: center;            
+        }
+        #projects {
+            height: 100vh;
+            width: 100%;
+            background-color: chocolate;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #contact {
+            height: 100vh;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
         }
         @media (max-width: 400px){
             section {
@@ -19,14 +55,28 @@
     </style>
 </head>
 <body>
-   <nav id="navbar"><a href="#welcome-section"></a>Welcome</nav>
+   <nav id="navbar">
+       <a href="#welcome-section" class="nav-link" >About </a>
+       <a href="#projects" class="nav-link">Works</a>
+       <a href="#contact" class="nav-link">Contact</a>
+   </nav>
     <section id="welcome-section">
-        <h1>Welcome!</h1>
+       <div id="card">
+        <h1>maxirios</h1>
+        <p>artist. web developer. the best of both worlds.</p>
+        
+       </div>
     </section>
     <section id="projects">
-        <div class="project-tile"><a href=""></a></div>
+        <div class="project-tile"><a href="#">Tribute Page</a></div>
+        <div class="project-tile"><a href="">Survey Form</a></div>
+        <div class="project-tile"><a href="">Product Landing Page</a></div>
+        <div class="project-tile"><a href="">Technical Documentation</a></div>
     </section>
-    <a href="https://github.com/maxirios" id="profile-link" target="_blank"></a>
+    <section id="contact">
+    <h1>Contact me:</h1>
+    <a href="https://github.com/maxirios" id="profile-link" target="_blank">github</a>
+    </section>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
