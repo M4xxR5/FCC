@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Git Documentation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
         dt {
             font-weight: 600;
@@ -18,7 +19,7 @@
             background-color: #ccc;
             font-weight: 500;
         }
-        .navbar {
+        #navbar {
             margin: 0;
             padding: 0;
             position: fixed;
@@ -32,15 +33,20 @@
         }
         main {
             margin-left: 300px;
+            height: 1000px;
         }
-        @media screen (max-width: 700px) {
-            .navbar {
+        @media screen and (max-width: 700px) {
+            #navbar {
                 width: 100%;
-                height: auto;
-                position: relative;
+                height: 200px;
+                position: absolute;
+                top: 0;
             }
-            .nav-link {
-                float: left;
+            
+            main {
+                margin-left: 0;
+                margin-top: 200px;
+                position: relative;
             }
         }
     </style>
