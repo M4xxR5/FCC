@@ -18,24 +18,47 @@
 			align-items: center;
 			background: #fff url('https://images.pexels.com/photos/373076/pexels-photo-373076.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
 			background-size: cover;
+			animation: fade-in 2s linear 0.5s;
+			animation-fill-mode: forwards;
+			opacity: 0;
 		}
 
 		#title {
 			font-size: 100px;
+			opacity: 0;
+			animation: angel-fall 2s ease-out 2s 1, fade-in 2s linear 2s;
+			animation-fill-mode: forwards;
 		}
-
+		
 		#subtitle {
 			font-size: 20px;
+			
 		}
-
+		#artist {
+			opacity: 0;
+			animation: fade-in 2s 4s;
+			animation-fill-mode: forwards;
+		}
+		
 		#artist:hover {
 			font-family: "Carter One", fantasy;
 		}
-
+		
+		#webdev {
+			opacity: 0;
+			animation: fade-in 2s 5.75s;
+			animation-fill-mode: forwards;
+		}
 		#webdev:hover {
 			font-family: 'PT Mono', monospace;
+            font-weight: 600;
 		}
-
+		
+		#bothworlds {
+			opacity: 0;
+			animation: fade-in 2s 7.5s;
+			animation-fill-mode: forwards;
+		}
 		#navbar {
 			display: flex;
 			justify-content: space-around;
@@ -97,6 +120,7 @@
 		#projects a {
 			text-decoration: none;
 			background-color: #fffa;
+            color: #000;
 			width: 100%;
 			text-align: center;
 			font-size: 2em;
@@ -118,6 +142,11 @@
 			background-color: #ccc;
 			box-shadow: 0 2px 5px #777;
 		}
+		
+		.project-tile:hover {
+			animation: hover 0.5s ease-in-out 0.1s infinite alternate;
+            animation-fill-mode: forwards;
+		}
 
 		#tribute {
 			grid-area: tribute;
@@ -125,7 +154,7 @@
 			background-size: cover;
 			background-position: center center;
 		}
-
+		
 		#survey {
 			grid-area: survey;
 			background: url('https://previews.dropbox.com/p/thumb/AArLXWqN31XiMpNhJmINILHRfepYRONNdZdzNtZoLFa2_FmP5BOBIpgzJGN_Lnhfsx_byKjgJSR_5LOPEhqqq7IQivu8ZxKjpFug_l82FclF47dIEjXoWv1WHwuzdfG2cPvnheN6dtEnnDW9DV_iAkCrvLKJ0Bgt2IMo9VYwsHAy42DhX76ORxxKxY6_5ESVFzGdUrg1uiSOAuFX7pqfPyNtxhq4bUt-fw4C2sp-BPG26G0_G-QYd84HMSrb2NARbYBXYNWZgn3zJjUYn_y9JY7qSRSZTe-nkrE6KBLlASGuW9IaXguJ5SqTkWGBv5svr0W3aJxXS4Sb_hRLexMNzw7_/p.jpeg?fv_content=true&size_mode=5');
@@ -169,6 +198,47 @@
 		.logo-link {
 			width: 90%;
 		}
+        
+        .logo-link:hover {
+            animation: rise 0.2s;
+            animation-fill-mode: forwards
+        }
+        
+		@keyframes angel-fall {
+			0% {
+				transform: translateY(-20px);
+			}
+			100% {
+				transform: translateY(0px);
+			}
+		}
+		
+		@keyframes fade-in {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+		
+		@keyframes rise {
+			0% {
+				transform: scale(1);
+			}
+			100% {
+				transform: scale(1.05);
+			}
+		}
+        
+        @keyframes hover {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-5px);
+            }
+        }
 	</style>
 </head>
 
@@ -181,7 +251,7 @@
 	<section id="welcome-section">
 		<div id="card">
 			<h1 id="title">maxirios</h1>
-			<p id="subtitle"><span id="artist">artist.</span> <span id="webdev">web developer.</span> the best of both worlds.</p>
+			<p id="subtitle"><span id="artist">artist.</span> <span id="webdev">web developer.</span> <span id="bothworlds">the best of both worlds.</span></p>
 
 		</div>
 	</section>
